@@ -7,7 +7,9 @@ $(document).ready(function(){
 
 $('.contact-btn').click(function(e){
 	console.log("contact-btn clicked");
+	window.location.replace('file:///Users/emilyanzalone/dev/portfolio/contact.html');
 });
+
 
 (function(d, t){
    var g = d.createElement(t),
