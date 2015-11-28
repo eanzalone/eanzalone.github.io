@@ -13,7 +13,7 @@
 }*/
 
 .container {
-	margin-top: 100px;
+	margin-top: 300px;
 }
 
 body {
@@ -26,6 +26,10 @@ body {
 .testy {
 	outline: red solid;
 }
-h6 {
-	text-align: right;
+.fa {
+	font-size: 50px;
+	color: black;
+}
+#contact-section {
+	margin-bottom: 20px;
 }
