@@ -1,0 +1,9 @@
+h1 {
+	color: blue;
+}
+.navbar {
+	color: white;
+	background-color: green;
+	border-radius: 0px;
+	width: 100%;
+}
