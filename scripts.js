@@ -5,9 +5,13 @@ $(document).ready(function(){
 
 
 
-$('.contact-btn').click(function(e){
+$('#contact-btn').click(function(e){
 	console.log("contact-btn clicked");
 	window.location.replace('file:///Users/emilyanzalone/dev/portfolio/contact.html');
+});
+$('#home-btn').click(function(e){
+	console.log("home-btn clicked");
+	window.location.replace('file:///Users/emilyanzalone/dev/portfolio/home.html');
 });
 
 
