@@ -5,8 +5,8 @@ $(document).ready(function(){
 
 
 
-$('.testbtn').click(function(e){
-	console.log("btn clicked");
+$('.contact-btn').click(function(e){
+	console.log("contact-btn clicked");
 });
 
 (function(d, t){
