@@ -15,63 +15,86 @@
 	<!-- Fonts -->
 	<link href='https://fonts.googleapis.com/css?family=Amatic+SC|Covered+By+Your+Grace' rel='stylesheet' type='text/css'>
 	<!-- Local -->
+	<script type="text/javascript" src="/game/phaser.js"></script>
+	<script type="text/javascript" src="/game/game.js"></script>
 	<link rel="stylesheet" href="style.css">
     <script type="text/javascript" src="scripts.js"></script>
-	<title>Emily Robyn</title>
+	<title>Emily Robyn - Web and Game Developer</title>
 </head>
 <body>
 
-	<div class="navbar navbar-fixed-top">
-		<span class="brand testy"><a href="#head">ER</a></span>
+	<div class="navbar navbar-fixed-top" id="scrollspyNav">
+		<br>
+		<span class="brand testy"><a href="#head"><strong>ER</strong></a></span>
 		<span class="pull-right">
-			<a class="nav_link testy" href="#about">About</a>
-			<a class="nav_link testy" href="#contact">Contact</a>
-			<a class="nav_link testy" href="#projects">Projects</a>
+			<!-- <a class="nav_link testy" href="#about"><strong>About</strong></a> -->
+			<a class="nav_link testy" href="#gameDemo"><strong>Game</strong></a>
+			<a class="nav_link testy" href="#projects"><strong>Projects</strong></a>
+			<a class="nav_link testy" href="#contact"><strong>Contact</strong></a>
 		</span>
-	</div>
-
+	</div> <!-- close navbar -->
 
 	<div id="head">
 		<div class="jumbotron">
-			<div class="container">
-				Header
+			<div class="container testy">
+				<div class="col-xs-offset-2 col-xs-3" id="helloIts"><br><strong>hello.</strong></div>
+				<div class="col-xs-7" id="aboutMe">Emily<br>Web & Game Developer<br>San Francisco Based</div>
 			</div> <!-- close container -->
 		</div> <!-- close jumbotron -->
-	<hr>
+	<!-- <hr> -->
 	</div>
 
-
-
-	<div id="about">
+<!-- 	<div id="about">
 		<div class="container">
 			<div class="row testy">
 				About
-			</div> <!-- close row -->
-		</div> <!-- close container -->
+			</div>
+		</div>
 	<hr>
+	</div> -->
+
+<hr>
+
+	<div id="gameDemo" align="center">
 	</div>
+
+<hr>
 
 	<div id="projects">
 		<div class="container testy">
-			<div class="row">
-				<ul>
-					<li>Walking Dead West Coast Live Chat</li>
-					<li>Dino Jokes</li>
-					<li>Jots</li>
-					<li>Co-Parent</li>
-				</ul>
+		<div class="col-xs-offset-1 col-xs-10">
+			<div class="row" align="left">
+				<p><img src="http://placehold.it/200x150">Jots</p>
+				<p>A character development app which allows you to organize characters across multiple projects. <a href="https://github.com/eanzalone">Github.</a></p>
 			</div> <!-- close row -->
+			<div class="row" align="right">
+				<p>Walking Dead West Coast Live Chat <img src="http://placehold.it/200x150"></p>
+				<p>It's hard enough living on the West Coast when a TV show airs, but it's even harder when... <a href="https://github.com/eanzalone">Github.</a></p>
+			</div> <!-- close row -->
+			<div class="row" align="left">
+				<p><img src="http://placehold.it/200x150">Dino Jokes</p>
+				<p>A fun site that randomly generates bad Dinosaur jokes. Based on the book, <em>title here</em>. <a href="https://github.com/eanzalone">Github.</a></p>
+			</div> <!-- close row -->
+			<div class="row" align="right">
+				<p>Co-Parent <img src="http://placehold.it/200x150"></p>
+				<p>An app for collaborative parenting. <a href="https://github.com/eanzalone">Github.</a></p>
+			</div> <!-- close row -->
+			<!-- <div class="row" align="left"> -->
+				<!-- <p>Pokedex <img src="http://placehold.it/200x150"></p> -->
+			<!-- </div> close row -->
+		</div>
 		</div> <!-- close container -->
-	<hr>
 	</div> <!-- close projects -->
+
+<hr>
 
 	<div id="contact">
 		<div class="container">
 			<div class="row testy">
-				<div class="col-md-6">
-					<h3>Send Me an Email</h3>
-					<h4>or</h4>
-					<h3>Find Me Online</h3>
+				<div class="col-xs-6 contactMe">
+					<p class="h3text">Send Me an Email</p>
+					<p class="h4text">or</p>
+					<p class="h3text">Find Me Online</p>
 
 
 
@@ -81,12 +104,12 @@
 					<p></p>
 					<a class="sm_icon" href="https://github.com/eanzalone" target="_blank"><i class="fa fa-github"></i></a> 
 					<a class="sm_icon" href="http://stackoverflow.com/users/5364945/emily-robyn" target="_blank"><i class="fa fa-stack-overflow"></i></a>
-					<a class="sm_icon" href="https://medium.com/@eRobyn" target="_blank"><i class="fa fa-medium"></i></a> 
+					<!-- <a class="sm_icon" href="https://medium.com/@eRobyn" target="_blank"><i class="fa fa-medium"></i></a>  -->
 
 
 
 				</div>
-				<div class="col-md-6">
+				<div class="col-xs-6">
 					<!-- Do not change the code! -->
 					<a id="foxyform_embed_link_725845"></a>
 					<!-- Do not change the code! -->
