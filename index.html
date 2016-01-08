@@ -1,39 +1,150 @@
+<!-- START SERVER: python -m SimpleHTTPServer -->
 <!DOCTYPE html>
 <html>
 <head>
 	<!-- jQuery -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.js"></script>
 	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<!-- Bootstrap JS -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 	<!-- Material Design Lite -->
 	<link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.indigo-pink.min.css">
 	<script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<!-- Fonts -->
+	<link href='https://fonts.googleapis.com/css?family=Amatic+SC|Covered+By+Your+Grace' rel='stylesheet' type='text/css'>
 	<!-- Local -->
+	<script type="text/javascript" src="/game/phaser.js"></script>
+	<script type="text/javascript" src="/game/game.js"></script>
 	<link rel="stylesheet" href="style.css">
     <script type="text/javascript" src="scripts.js"></script>
-	<title></title>
+    <link rel="shortcut icon" href="images/transblue.gif">
+	<title>Emily Robyn - Web and Game Developer</title>
 </head>
 <body>
 
-<center>
-<h2>Future Home of</h2>
-<h3>Emily Robyn's Personal Website</h3>
-</center>
+	<div class="navbar navbar-fixed-top" id="scrollspyNav">
+		<span class="testy"><a href="#head"><strong><img src="images/transblue.gif" id="brand"></strong></a></span>
+		<span class="pull-right">
+			<br>
+			<!-- <a class="nav_link testy" href="#about"><strong>About</strong></a> -->
+			<!-- <a class="nav_link testy" href="#gameDemo"><strong>Game</strong></a> -->
+			<a class="nav_link testy" href="#projects"><strong>Projects</strong></a>
+			<a class="nav_link testy" href="#contact"><strong>Contact</strong></a>
+		</span>
+	</div> <!-- close navbar -->
+
+	<div id="head">
+		<div class="jumbotron">
+			<div class="container testy">
+				<div class="col-xs-offset-2 col-xs-3" id="helloIts"><br><strong>hello.</strong></div>
+				<div class="col-xs-7" id="aboutMe">Emily<br>Web & Game Developer<br>San Francisco Based</div>
+			</div> <!-- close container -->
+		</div> <!-- close jumbotron -->
+	<!-- <hr> -->
+	</div>
+
+<!-- 	<div id="about">
+		<div class="container">
+			<div class="row testy">
+				About
+			</div>
+		</div>
+	<hr>
+	</div> -->
+
+<!-- <hr> -->
+
+	<!-- <div id="gameDemo" align="center">
+	<script>
+	    // var game = new Phaser.Game(800, 600, Phaser.AUTO, 'gameDemo');
+	    // game.state.add('initState', initState);// add in loading bar
+	    // game.state.add('loading', loading);// loading bar
+	    // game.state.add('mainMenu', mainMenu); //title and menu
+	    // game.state.add('settingsPg', settingsPg); // settings page
+	    // game.state.add('tutorialPg', tutorialPg); // how to play
+	    // game.state.add('chapter1', chapter1);// story 1
+	    // game.state.add('level1', level1); // level 1
+	    // game.state.add('chapter2', chapter2);// story 2
+	    // game.state.add('level2', level2); // level 2
+	    // game.state.add('chapter3', chapter3);// story 3
+	    // game.state.add('level3', level3); // level 3
+	    // game.state.add('tobeContinued', tobeContinued); // to be continued
+	    // game.state.add('gameover', gameover); // game over
+	    // game.state.start('initState');
+	</script>
+	</div> -->
+
+<!-- <hr> -->
+
+	<div id="projects">
+		<div class="container testy">
+		<div class="col-xs-offset-1 col-xs-10">
+
+			<div class="row" align="right">
+				<img class="projIMGright" src="images/supplyrun.png">
+				<h4><a href="http://supplyrun.herokuapp.com/">Supply Run</a></h4>
+				<p class="projTxt">The zombie apocolypse is upon us, and it's up to <em>you</em> to keep your group alive. Fight zombies and collect valuble supplies in this exciting, interactive, zombie story.<br><strong>Technologies:</strong> HTML5/CSS3, Javascript, Phaser.io, Socket.io. <a href="https://github.com/eanzalone/supply-run">-Github-</a></p>
+			</div> <!-- close row -->
+			<div class="row" align="left">
+				<img class="projIMGleft" src="http://placehold.it/200x150">
+				<h4><a href="http://jots-thestoryplanner.herokuapp.com/">Jots</a></h4>
+				<p class="projTxt">As a writer, I constantly struggle with coming up with great characters for a story, writing them on a post-it note, and promptly losing it. Jots is here to fix that! Organize your characters by project, and flesh them out with prompting questions to make your characters come to life.<br><strong>Technologies:</strong> HTML5/CSS3, Bootstrap, jQuery, Javascript, Material Design. <a href="https://github.com/eanzalone/WDI-project-1">-Github-</a></p>
+			</div> <!-- close row -->
+			<div class="row" align="right">
+				<img class="projIMGright" src="http://placehold.it/200x150">
+				<h4><a href="#">Walking Dead West Coast Live Chat</a></h4>
+				<p class="projTxt">It's hard enough living on the West Coast when a TV show airs, but it's even harder when you don't have anyone to talk to about a show as your watching it. I built this chat room to be able to find and talk to other Walking Dead fans while the show is airing.<br><strong>Technologies:</strong> XXXXXXXXXXXXX. <a href="https://github.com/eanzalone/WDI-project-1">-Github-</a></p>
+			</div> <!-- close row -->
+			<div class="row" align="left">
+				<img class="projIMGleft" src="images/coparent.png">
+				<h4><a href="http://co-parent.herokuapp.com/">Co-Parent</a></h4>
+				<p class="projTxt">The nuclear family of the 1950s is becoming less and less common, but resources for these alternative family styles are few and far between. Co-Parent is a social network for collaborative parenting. It uses compatibility scores to help parents find others with smiliar values and provides a space for sharing resources.<br><strong>Technologies:</strong> HTML5/CSS3, Ruby on Rails, Material Design. <a href="https://github.com/brendanbohn/project02">-Github-</a></p>
+			</div> <!-- close row -->
+
+			<!-- <div class="row" align="left">
+				<p><img src="http://placehold.it/200x150">Dino Jokes</p>
+				<p class="projTxt">A fun site that randomly generates bad Dinosaur jokes. Based on the book, <em>Positively Prehistoric Jokes</em>. <a href="https://github.com/eanzalone">Github.</a></p>
+			</div> --> <!-- close row -->
+			<!-- <div class="row" align="left">
+				<p>Pokedex <img src="http://placehold.it/200x150"></p>
+			</div> --> <!-- close row -->
+
+		</div>
+		</div> <!-- close container -->
+	</div> <!-- close projects -->
+
+<!-- <hr> -->
+
+	<div id="contact">
+		<div class="container">
+			<div class="row testy">
+				<div class="col-xs-6 contactMe">
+					<p class="h3text">Send Me an Email</p>
+					<p class="h4text">or</p>
+					<p class="h3text">Find Me Online</p>
+
+					<a class="sm_icon" href="https://www.facebook.com/ERobynA" target="_blank"><i class="fa fa-facebook"></i></a> 
+					<a class="sm_icon" href="https://twitter.com/erobyn23" target="_blank"><i class="fa fa-twitter"></i></a> 
+					<a class="sm_icon" href="https://www.linkedin.com/in/emilyanzalone" target="_blank"><i class="fa fa-linkedin"></i></a>
+					<p></p>
+					<a class="sm_icon" href="https://github.com/eanzalone" target="_blank"><i class="fa fa-github"></i></a> 
+					<a class="sm_icon" href="http://stackoverflow.com/users/5364945/emily-robyn" target="_blank"><i class="fa fa-stack-overflow"></i></a>
+					<!-- <a class="sm_icon" href="https://medium.com/@eRobyn" target="_blank"><i class="fa fa-medium"></i></a>  -->
+
+
+
+				</div>
+				<div class="col-xs-6">
+					<!-- Do not change the code! -->
+					<a id="foxyform_embed_link_725845"></a>
+					<!-- Do not change the code! -->
+				</div>
+			</div> <!-- close row -->
+		</div> <!-- close container -->
+	</div> <!-- close contact -->
 
 </body>
 </html>
-
-<style>
-body {
-	background-image: url('http://www.wallpaperup.com/uploads/wallpapers/2013/03/24/62829/73a986d9cad8a8ca40c078a1a406f8fa.jpg');
-	background-repeat: no-repeat;
-	background-color: black;
-}
-center {
-	margin-top: 100px;
-	color: white;
-}
-</style>
