@@ -1,19 +1,19 @@
 .diagonal-bg {
-  position: fixed;
+  /*position: fixed;
   top: 0;
   z-index: -1;
   width: 100%;
-  height: 100%;
+  height: 100%;*/
 }
 
 body {
   /*background: #c5c0b7;*/
-  background: gray;
+  /*background: gray;*/
   /*height: 100%;*/
-  height: 1000px;
+  /*height: 1000px;
   font-family: "Times New Roman", serif;
   font-size: 16px;
-  -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;*/
 }
 
 
@@ -22,51 +22,51 @@ html, body {
 }
 
 .navbar-fixed {
-    top: 0;
+    /*top: 0;
     z-index: 100;
     position: fixed;
-    width: 100%;
+    width: 100%;*/
 }
 
 #body_div {
-    top: 0;
+    /*top: 0;
     position: relative;
-    height: 100%;
+    height: 100%;*/
     /*background-color: green;*/
 }
 
 #banner {
-    width: 100%;
-    height: 273px;
+    /*width: 100%;
+    height: 273px;*/
     /*height: 500px;*/
-    background-color: lightgray;
+    /*background-color: lightgray;*/
     /* overflow: hidden;*/
 }
 
 #nav_bar {
-    border: 0;
+    /*border: 0;
     background-color: #202020;
     border-radius: 0px;
     margin-bottom: 0;
-    height: 30px;
+    height: 30px;*/
 }
 
 .nav_links {
-    margin: 0;
+    /*margin: 0;*/
 }
 
 .nav_links li {
-    display: inline-block;
-    margin-top: 4px;
+    /*display: inline-block;
+    margin-top: 4px;*/
 }
 .nav_links li a {
-    padding: 0 15.5px;
+    /*padding: 0 15.5px;
     color: #3498db;
-    text-decoration: none;
+    text-decoration: none;*/
 }
 
-#speechBubble {
-    max-width: 70%;
+.speechBubble {
+    /*max-width: 70%;*/
 }
 #emailIcon, #resumeIcon {
     max-width: 50px;
@@ -75,13 +75,13 @@ html, body {
     /*width: 50%;*/
 }
 #history {
-    padding-top: 100px;
-    border: 1px solid red;
+    /*padding-top: 100px;
+    border: 1px solid red;*/
 }
 #projects {
-    padding-top: 100px;
-    border: 1px solid purple;
+    /*padding-top: 100px;
+    border: 1px solid purple;*/
 }
 footer {
-    background-color: red;
+    /*background-color: red;*/
 }
