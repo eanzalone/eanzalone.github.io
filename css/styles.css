@@ -68,3 +68,6 @@ html, body {
 #speechBubble {
     max-width: 70%;
 }
+#emailIcon, #resumeIcon {
+    max-width: 50px;
+}
