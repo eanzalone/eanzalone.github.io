@@ -37,9 +37,10 @@ html, body {
 
 #banner {
     width: 100%;
-    height: 273px;
-   /* background-color: gray;
-    overflow: hidden;*/
+    /*height: 273px;*/
+    height: 500px;
+    background-color: gray;
+    /* overflow: hidden;*/
 }
 
 #nav_bar {
@@ -62,4 +63,8 @@ html, body {
     padding: 0 15.5px;
     color: #3498db;
     text-decoration: none;
+}
+
+#speechBubble {
+    max-width: 70%;
 }
