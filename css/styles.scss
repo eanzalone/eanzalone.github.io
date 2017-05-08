@@ -1,0 +1,125 @@
+.diagonal-bg {
+  position: fixed;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+body {
+  background: #c5c0b7;
+  background: gray;
+  height: 100%;
+  height: 4000px;
+//   font-family: "Times New Roman", serif;
+//   font-size: 16px;
+//   -webkit-font-smoothing: antialiased;
+}
+
+#body_div {
+    top: 0;
+    position: relative;
+    height: 100%;
+    background-color: green;
+}
+
+#banner {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    // height: 273px;
+    height: 475px;
+    margin: 0 auto;
+    // padding: 0 auto;
+    background-color: lavender;
+    //  overflow: hidden;
+    display: flex;
+    // flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    #selfPortrait {
+        // outline: 1px solid red;
+        // width: 20%;
+        // display: none;
+        margin-top: 100px;
+    }
+    .right-banner {
+        // outline: 1px solid green;
+        padding-top: 15px;
+        flex-direction: column;
+        display: flex;
+        // flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        .speechBubble {
+            // margin: 0 auto;
+            // outline: 1px solid red;
+            max-width: 80%;
+            height: 200px;
+        }
+        #socialLinks {
+            margin: auto 0;
+            background-image: url(../images/contact-box3.png);
+            background-repeat: no-repeat;
+            background-position: center; 
+            // width: 560px;
+            // height: 290px;
+            // outline: 1px solid red;
+            display: flex;
+            // flex-wrap: wrap;
+            // justify-content: center;
+            // align-content: center;
+            padding: 50px 100px;
+            img {
+                margin: 5px;
+                // outline: 1px solid blue;
+                flex: 1;
+                height: 100px;
+                max-width: 100px;
+                &#linkedInIcon {
+                    max-width: 110px !important;
+                }
+            }
+        }
+    }
+}
+
+.navbar-fixed {
+    top: 0;
+    z-index: 100;
+    position: fixed;
+    width: 100%;
+}
+
+#nav_bar {
+    border: 0;
+    background-color: #202020;
+    border-radius: 0px;
+    margin-bottom: 0;
+    height: 30px;
+    .nav_links {
+        margin: 0;
+    }
+    .nav_links li {
+        display: inline-block;
+        margin-top: 4px;
+    }
+    .nav_links li a {
+        padding: 0 15.5px;
+        color: #3498db;
+        text-decoration: none;
+    }
+}
+#history {
+    // padding-top: 100px;
+    // border: 1px solid red;
+}
+#projects {
+    // padding-top: 100px;
+    // border: 1px solid purple;
+}
+.projIMG {
+    // max-width: 500px;
+}
+footer {
+    // background-color: red;
+}
