@@ -5,29 +5,26 @@
 }
 
 // VARIABLES
-$timeline-color: rgba(black, .3);
+$timeline-color: rgba(darkblue, .7);
 
 // BASE LAYOUT
 body {
   background: #c5c0b7;
-  height: 4000px;
+//   height: 4000px;
   font-family: headerFont;
 }
 
 h1 {
-    color: red;
-    font-size: 72px;
-}
-a {
-    color: purple;
-    &:hover {
-        color: green;
-    }
-}
-
-.projectTitle {
     color: blue;
     font-size: 72px;
+    margin-left: 5%;
+    font-weight: 700;
+}
+a {
+    color: navy;
+    &:hover {
+        color: blue;
+    }
 }
 
 .diagonal-bg {
@@ -104,18 +101,23 @@ a {
     border: 0;
     border-radius: 0px;
     margin-bottom: 0;
-    height: 30px;
+    height: 50px;
+    &.navbar-fixed {
+        // background-color: #696969;
+        background-color: skyblue;
+    }
     .nav_links {
+        border-bottom: 2px solid red;
         margin: 0;
+        height: 100%;
         li {
+            backface-visibility: purple;
             display: inline-block;
             margin-top: 4px;
+            font-size: 24px;
             a {
                 padding: 0 15.5px;
                 text-decoration: none;
-            }
-            &:hover {
-                background-color: #202020;
             }
         }
     }
@@ -123,43 +125,74 @@ a {
 
 #technologies {
     padding-top: 100px;
-    border: 3px solid orange;
+    // outline: 2px solid goldenrod;
+    .techIcons {
+        // background-color: white;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 0px 100px;
+    }
+    span {
+        // outline: 1px solid red;
+        margin: 40px 10px 0px 10px;
+    }
+    .languageIcon {
+        width: 75px;
+        height: 75px;
+        &#gulp {
+            width: 40px;
+        }
+        &#php {
+            margin: 15px 0px;
+            height: 45px;
+        }
+    }
+    h2 {
+        // background-color: red;
+        // color: purple;
+        text-align: center;
+    }
 }
 
 #history {
     padding-top: 100px;
-    // border: 3px solid red;
 }
 
 .timeline-item {
-    // outline: 1px solid green;
 	padding: 3em 2em 2em;
 	position: relative;
-	color: rgba(black, .7);
+    color: black;
 	border-left: 2px solid $timeline-color;
+    display: flex;
     .lifeEventIMG {
+        min-width: 199px !important;
         max-width: 200px;
-        // &.largeIMG {
-        //     max-width: 250px;
-        // }
+        &.sindeo {
+            max-height: 110px !important;
+        }
+        &.theater {
+            max-height: 200px;
+        }
     }
-    h4 {
-        // background-color: darkgray;
-
-        font-size: 24px;
+    .liveEventText {
+        margin-left: 20px;
+        h4 {
+            font-size: 28px;
+        }
+        p {
+            font-size: 16px;
+        }
     }
-	p {
-		color: blue;
-	}
 	&::before {
 		content: attr(date-is);
 		position: absolute;
         left: 1em;
 		top: 1em;
 		display: block;
-
         font-weight: 700;
-		font-size: 11px;
+		font-size: 12px;
 	}
 
 	&::after {
@@ -172,7 +205,7 @@ a {
 		border-radius: 10px;
 		content: '';
 		border: 2px solid $timeline-color;
-		background: pink;
+		background: darkblue;
 	}
 
 	&:last-child {
@@ -183,11 +216,8 @@ a {
 		;
 	}
 }
-
-
-
 footer {
-    background-color: red;
+    background-color: pink;
 }
 
 

@@ -3,21 +3,18 @@
   src: url(fonts/FreePixel.ttf); }
 body {
   background: #c5c0b7;
-  height: 4000px;
   font-family: headerFont; }
 
 h1 {
-  color: red;
-  font-size: 72px; }
+  color: blue;
+  font-size: 72px;
+  margin-left: 5%;
+  font-weight: 700; }
 
 a {
-  color: purple; }
+  color: navy; }
   a:hover {
-    color: green; }
-
-.projectTitle {
-  color: blue;
-  font-size: 72px; }
+    color: blue; }
 
 .diagonal-bg {
   position: fixed;
@@ -81,21 +78,42 @@ a {
   border: 0;
   border-radius: 0px;
   margin-bottom: 0;
-  height: 30px; }
+  height: 50px; }
+  #nav_bar.navbar-fixed {
+    background-color: skyblue; }
   #nav_bar .nav_links {
-    margin: 0; }
+    border-bottom: 2px solid red;
+    margin: 0;
+    height: 100%; }
     #nav_bar .nav_links li {
+      backface-visibility: purple;
       display: inline-block;
-      margin-top: 4px; }
+      margin-top: 4px;
+      font-size: 24px; }
       #nav_bar .nav_links li a {
         padding: 0 15.5px;
         text-decoration: none; }
-      #nav_bar .nav_links li:hover {
-        background-color: #202020; }
 
 #technologies {
-  padding-top: 100px;
-  border: 3px solid orange; }
+  padding-top: 100px; }
+  #technologies .techIcons {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0px 100px; }
+  #technologies span {
+    margin: 40px 10px 0px 10px; }
+  #technologies .languageIcon {
+    width: 75px;
+    height: 75px; }
+    #technologies .languageIcon#gulp {
+      width: 40px; }
+    #technologies .languageIcon#php {
+      margin: 15px 0px;
+      height: 45px; }
+  #technologies h2 {
+    text-align: center; }
 
 #history {
   padding-top: 100px; }
@@ -103,14 +121,22 @@ a {
 .timeline-item {
   padding: 3em 2em 2em;
   position: relative;
-  color: rgba(0, 0, 0, 0.7);
-  border-left: 2px solid rgba(0, 0, 0, 0.3); }
+  color: black;
+  border-left: 2px solid rgba(0, 0, 139, 0.7);
+  display: flex; }
   .timeline-item .lifeEventIMG {
+    min-width: 199px !important;
     max-width: 200px; }
-  .timeline-item h4 {
-    font-size: 24px; }
-  .timeline-item p {
-    color: blue; }
+    .timeline-item .lifeEventIMG.sindeo {
+      max-height: 110px !important; }
+    .timeline-item .lifeEventIMG.theater {
+      max-height: 200px; }
+  .timeline-item .liveEventText {
+    margin-left: 20px; }
+    .timeline-item .liveEventText h4 {
+      font-size: 28px; }
+    .timeline-item .liveEventText p {
+      font-size: 16px; }
   .timeline-item::before {
     content: attr(date-is);
     position: absolute;
@@ -118,7 +144,7 @@ a {
     top: 1em;
     display: block;
     font-weight: 700;
-    font-size: 11px; }
+    font-size: 12px; }
   .timeline-item::after {
     width: 10px;
     height: 10px;
@@ -128,13 +154,13 @@ a {
     left: -7px;
     border-radius: 10px;
     content: '';
-    border: 2px solid rgba(0, 0, 0, 0.3);
-    background: pink; }
+    border: 2px solid rgba(0, 0, 139, 0.7);
+    background: darkblue; }
   .timeline-item:last-child {
-    border-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 60%, transparent) 1 100%; }
+    border-image: linear-gradient(to bottom, rgba(0, 0, 139, 0.7) 60%, rgba(0, 0, 139, 0)) 1 100%; }
 
 footer {
-  background-color: red; }
+  background-color: pink; }
 
 @media (max-width: 1026px) {
   body {
