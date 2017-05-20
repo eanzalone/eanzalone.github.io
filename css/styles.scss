@@ -1,22 +1,32 @@
+// FONTS
 @font-face {
     font-family: headerFont;
     src: url(fonts/FreePixel.ttf);
 }
 
+// VARIABLES
+$timeline-color: rgba(black, .3);
+
+// BASE LAYOUT
 body {
   background: #c5c0b7;
-  height: 2000px;
+  height: 4000px;
+  font-family: headerFont;
 }
 
 h1 {
     color: red;
-    font-family: headerFont;
     font-size: 72px;
+}
+a {
+    color: purple;
+    &:hover {
+        color: green;
+    }
 }
 
 .projectTitle {
     color: blue;
-    font-family: headerFont;
     font-size: 72px;
 }
 
@@ -28,6 +38,26 @@ h1 {
   height: 100%;
 }
 
+#body_div {
+    top: 0;
+    position: relative;
+    height: 100%;
+}
+
+.navbar-fixed {
+    top: 0;
+    z-index: 100;
+    position: fixed;
+    width: 100%;
+}
+
+.timeline-container {
+	max-width: 1024px;
+	width: 90%;
+	margin: 0 auto;
+}
+
+// SECTION STYLES
 #banner {
     display: flex;
     flex-wrap: wrap;
@@ -70,55 +100,105 @@ h1 {
     }
 }
 
-#body_div {
-    top: 0;
-    position: relative;
-    height: 100%;
-}
-
-.navbar-fixed {
-    top: 0;
-    z-index: 100;
-    position: fixed;
-    width: 100%;
-}
-
 #nav_bar {
     border: 0;
-    background-color: #202020;
     border-radius: 0px;
     margin-bottom: 0;
     height: 30px;
     .nav_links {
         margin: 0;
+        li {
+            display: inline-block;
+            margin-top: 4px;
+            a {
+                padding: 0 15.5px;
+                text-decoration: none;
+            }
+            &:hover {
+                background-color: #202020;
+            }
+        }
     }
-    .nav_links li {
-        display: inline-block;
-        margin-top: 4px;
-    }
-    .nav_links li a {
-        padding: 0 15.5px;
-        // color: #3498db;
-        text-decoration: none;
-    }
-}
-#history {
-    // padding-top: 100px;
-    // border: 1px solid red;
-}
-#projects {
-    // padding-top: 100px;
-    div {
-        border: 2px solid purple;
-    }
-}
-.projIMG {
-    max-width: 500px;
-}
-footer {
-    // background-color: red;
 }
 
+#technologies {
+    padding-top: 100px;
+    border: 3px solid orange;
+}
+
+#history {
+    padding-top: 100px;
+    // border: 3px solid red;
+}
+
+.timeline-item {
+    // outline: 1px solid green;
+	padding: 3em 2em 2em;
+	position: relative;
+	color: rgba(black, .7);
+	border-left: 2px solid $timeline-color;
+    .lifeEventIMG {
+        max-width: 200px;
+        // &.largeIMG {
+        //     max-width: 250px;
+        // }
+    }
+    h4 {
+        // background-color: darkgray;
+
+        font-size: 24px;
+    }
+	p {
+		color: blue;
+	}
+	&::before {
+		content: attr(date-is);
+		position: absolute;
+        left: 1em;
+		top: 1em;
+		display: block;
+
+        font-weight: 700;
+		font-size: 11px;
+	}
+
+	&::after {
+		width: 10px;
+		height: 10px;
+		display: block;
+		top: 1em;
+		position: absolute;
+		left: -7px;
+		border-radius: 10px;
+		content: '';
+		border: 2px solid $timeline-color;
+		background: pink;
+	}
+
+	&:last-child {
+		border-image: linear-gradient(
+			to bottom,
+			$timeline-color 60%,
+			rgba($timeline-color, 0)) 1 100%
+		;
+	}
+}
+
+
+
+footer {
+    background-color: red;
+}
+
+
+
+
+
+@media (max-width: 1026px) {
+    body {
+        background: skyblue;
+    }
+}
 @media (max-width: 800px) {
     body {
         background: pink;
