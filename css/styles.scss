@@ -3,21 +3,21 @@
     src: url(fonts/FreePixel.ttf);
 }
 
+body {
+  background: #c5c0b7;
+  height: 2000px;
+}
+
 h1 {
     color: red;
     font-family: headerFont;
     font-size: 72px;
 }
 
-h4 {
+.projectTitle {
     color: blue;
     font-family: headerFont;
     font-size: 72px;
-}
-
-body {
-  background: #c5c0b7;
-  height: 2000px;
 }
 
 .diagonal-bg {
@@ -108,7 +108,9 @@ body {
 }
 #projects {
     // padding-top: 100px;
-    // border: 1px solid purple;
+    div {
+        border: 2px solid purple;
+    }
 }
 .projIMG {
     max-width: 500px;

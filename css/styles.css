@@ -1,19 +1,19 @@
 @font-face {
   font-family: headerFont;
   src: url(fonts/FreePixel.ttf); }
+body {
+  background: #c5c0b7;
+  height: 2000px; }
+
 h1 {
   color: red;
   font-family: headerFont;
   font-size: 72px; }
 
-h4 {
+.projectTitle {
   color: blue;
   font-family: headerFont;
   font-size: 72px; }
-
-body {
-  background: #c5c0b7;
-  height: 2000px; }
 
 .diagonal-bg {
   position: fixed;
@@ -82,6 +82,9 @@ body {
   #nav_bar .nav_links li a {
     padding: 0 15.5px;
     text-decoration: none; }
+
+#projects div {
+  border: 2px solid purple; }
 
 .projIMG {
   max-width: 500px; }
