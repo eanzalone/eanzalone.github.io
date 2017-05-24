@@ -15,10 +15,14 @@ $(document).ready(function(){
       console.log($(window).scrollTop())
     if ($(window).scrollTop() > 475) {
       $('#nav_bar').addClass('navbar-fixed');
+      $('navbar-fixed').animate({backgroundColor: "#CD3333"}, "slow");
     }
     if ($(window).scrollTop() < 476) {
       $('#nav_bar').removeClass('navbar-fixed');
     }
   });
+
+  // fade in background color when add class .navbar-fixed
+
 
 });

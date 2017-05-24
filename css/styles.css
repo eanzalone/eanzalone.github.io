@@ -3,13 +3,16 @@
   src: url(fonts/FreePixel.ttf); }
 body {
   background: #c5c0b7;
-  font-family: headerFont; }
+  font-family: headerFont;
+  color: black; }
 
 h1 {
-  color: green;
   font-size: 72px;
   margin-left: 7%;
   font-weight: 700; }
+  @media (max-width: 475px) {
+    h1 {
+      font-size: 48px; } }
 
 a {
   color: navy; }
@@ -48,6 +51,8 @@ a {
   display: flex;
   justify-content: center;
   align-content: center; }
+  #banner .speechBubbleMobile {
+    display: none; }
   #banner #selfPortrait {
     margin-top: 100px; }
   #banner .right-banner {
@@ -56,7 +61,7 @@ a {
     display: flex;
     align-content: center;
     justify-content: center; }
-    #banner .right-banner .speechBubble {
+    #banner .right-banner .speechBubbleDesktop {
       max-width: 80%;
       height: 200px; }
     #banner .right-banner #socialLinks {
@@ -73,25 +78,29 @@ a {
         max-width: 100px; }
         #banner .right-banner #socialLinks img#linkedInIcon {
           max-width: 110px !important; }
+        #banner .right-banner #socialLinks img#stackOverflowIcon {
+          height: 110px;
+          max-width: 110px;
+          margin: 0; }
 
 #nav_bar {
   border: 0;
   border-radius: 0px;
   margin-bottom: 0;
-  height: 50px; }
+  height: 45px;
+  transition: 1s ease-out all; }
   #nav_bar.navbar-fixed {
     background-color: skyblue; }
   #nav_bar .nav_links {
-    border-bottom: 2px solid red;
     margin: 0;
-    height: 100%; }
+    height: 100%;
+    height: 45px; }
     #nav_bar .nav_links li {
-      backface-visibility: purple;
       display: inline-block;
-      margin-top: 4px;
+      margin: 5px 10px;
       font-size: 24px; }
       #nav_bar .nav_links li a {
-        padding: 0 15.5px;
+        padding: 0 15px;
         text-decoration: none; }
 
 #technologies {
@@ -160,13 +169,152 @@ a {
     border-image: linear-gradient(to bottom, rgba(0, 0, 139, 0.7) 60%, rgba(0, 0, 139, 0)) 1 100%; }
 
 footer {
-  background-color: pink; }
+  border-top: 1px solid rgba(225, 225, 225, 0.25);
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 50px; }
+  footer p {
+    font-size: 11px;
+    text-align: center;
+    margin: 10px 0; }
+  footer span {
+    font-weight: 700; }
+  footer #copyright {
+    font-size: 16px;
+    font-weight: 400; }
 
-@media (max-width: 1026px) {
+@media (max-width: 1026px) and (min-width: 926px) {
   body {
-    background: skyblue; } }
-@media (max-width: 800px) {
+    background: lavender; }
+
+  #banner {
+    width: 100%; } }
+@media (max-width: 925px) and (min-width: 801px) {
   body {
-    background: pink; } }
+    background-color: lightgreen; }
+
+  #banner {
+    flex-wrap: nowrap;
+    margin: 0; }
+    #banner #selfPortrait {
+      width: 20%; }
+    #banner .right-banner {
+      width: 80%; }
+      #banner .right-banner #socialLinks {
+        padding: 50px 20%; }
+        #banner .right-banner #socialLinks img {
+          height: 75px;
+          max-width: 75px; }
+          #banner .right-banner #socialLinks img#linkedInIcon {
+            max-width: 85px !important; }
+          #banner .right-banner #socialLinks img#stackOverflowIcon {
+            height: 85px;
+            max-width: 85px;
+            margin: 0; } }
+@media (max-width: 800px) and (min-width: 614px) {
+  body {
+    background: lightgoldenrodyellow; }
+
+  #banner {
+    flex-wrap: nowrap;
+    margin: 0; }
+    #banner .speechBubbleDesktop {
+      max-width: 100% !important; }
+    #banner #selfPortrait {
+      width: 25%; }
+    #banner .right-banner {
+      width: 75%; }
+      #banner .right-banner #socialLinks {
+        padding: 0 3%;
+        border: 5px solid #020f6d;
+        background-color: #cff4fd !important;
+        background-image: none; }
+        #banner .right-banner #socialLinks img {
+          height: 75px;
+          max-width: 75px; }
+          #banner .right-banner #socialLinks img#linkedInIcon {
+            max-width: 85px !important; }
+          #banner .right-banner #socialLinks img#stackOverflowIcon {
+            height: 85px;
+            max-width: 85px;
+            margin: 0; } }
+@media (max-width: 613px) {
+  body {
+    background: pink; }
+
+  #banner {
+    flex-wrap: wrap;
+    width: 100vw;
+    height: 475px;
+    margin: 0;
+    justify-content: flex-start;
+    align-content: flex-start; }
+    #banner .speechBubbleMobile {
+      display: inline;
+      max-width: 90vw;
+      height: 150px;
+      margin: 10px auto 0; }
+    #banner #selfPortrait {
+      margin: 0;
+      max-height: 325px; }
+    #banner .right-banner {
+      flex-direction: row;
+      width: 60vw; } }
+    @media (max-width: 613px) and (max-width: 355px) {
+      #banner .right-banner {
+        width: 50vw; } }
+@media (max-width: 613px) {
+      #banner .right-banner .speechBubbleDesktop {
+        display: none; }
+      #banner .right-banner #socialLinks {
+        border: 5px solid #020f6d;
+        background-color: #cff4fd !important;
+        background-image: none;
+        width: 100%;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        padding: 0; }
+        #banner .right-banner #socialLinks img {
+          height: 75px;
+          max-width: 75px; }
+          #banner .right-banner #socialLinks img#linkedInIcon {
+            max-width: 85px !important; }
+          #banner .right-banner #socialLinks img#stackOverflowIcon {
+            height: 85px;
+            max-width: 85px;
+            margin: 0; } }
+        @media (max-width: 613px) and (max-width: 355px) {
+          #banner .right-banner #socialLinks img {
+            height: 65px;
+            max-width: 65px; }
+            #banner .right-banner #socialLinks img#linkedInIcon {
+              max-width: 75px !important; }
+            #banner .right-banner #socialLinks img#stackOverflowIcon {
+              height: 75px;
+              max-width: 75px;
+              margin: 0; } }
+
+@media (max-width: 613px) {
+  #nav_bar .nav_links {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center; }
+    #nav_bar .nav_links li {
+      margin: 0;
+      font-size: 24px; }
+      #nav_bar .nav_links li a {
+        padding: 0; }
+
+  #technologies .techIcons {
+    padding: 0; }
+
+  .timeline-item {
+    flex-direction: column; } }
 
 /*# sourceMappingURL=styles.css.map */

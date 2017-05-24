@@ -6,19 +6,22 @@
 
 // VARIABLES
 $timeline-color: rgba(darkblue, .7);
+$navbarColor: skyblue;
 
 // BASE LAYOUT
 body {
-  background: #c5c0b7;
-//   height: 4000px;
-  font-family: headerFont;
+    background: #c5c0b7;
+    font-family: headerFont;
+    color: black;
 }
 
 h1 {
-    color: green;
     font-size: 72px;
     margin-left: 7%;
     font-weight: 700;
+    @media (max-width: 475px) {
+        font-size: 48px;
+    }
 }
 a {
     color: navy;
@@ -64,6 +67,9 @@ a {
     display: flex;
     justify-content: center;
     align-content: center;
+    .speechBubbleMobile {
+        display: none;
+    }
     #selfPortrait {
         margin-top: 100px;
     }
@@ -73,7 +79,7 @@ a {
         display: flex;
         align-content: center;
         justify-content: center;
-        .speechBubble {
+        .speechBubbleDesktop {
             max-width: 80%;
             height: 200px;
         }
@@ -92,6 +98,11 @@ a {
                 &#linkedInIcon {
                     max-width: 110px !important;
                 }
+                &#stackOverflowIcon {
+                    height: 110px;
+                    max-width: 110px;
+                    margin: 0;
+                }
             }
         }
     }
@@ -101,22 +112,21 @@ a {
     border: 0;
     border-radius: 0px;
     margin-bottom: 0;
-    height: 50px;
+    height: 45px;
+    transition: 1s ease-out all;
     &.navbar-fixed {
-        // background-color: #696969;
-        background-color: skyblue;
+        background-color: $navbarColor;
     }
     .nav_links {
-        border-bottom: 2px solid red;
         margin: 0;
         height: 100%;
+        height: 45px;
         li {
-            backface-visibility: purple;
             display: inline-block;
-            margin-top: 4px;
+            margin: 5px 10px;
             font-size: 24px;
             a {
-                padding: 0 15.5px;
+                padding: 0 15px;
                 text-decoration: none;
             }
         }
@@ -125,9 +135,7 @@ a {
 
 #technologies {
     padding-top: 100px;
-    // outline: 2px solid goldenrod;
     .techIcons {
-        // background-color: white;
         display: flex;
         align-content: center;
         justify-content: center;
@@ -135,7 +143,6 @@ a {
         padding: 0px 100px;
     }
     span {
-        // outline: 1px solid red;
         margin: 40px 10px 0px 10px;
     }
     .languageIcon {
@@ -150,8 +157,6 @@ a {
         }
     }
     h2 {
-        // background-color: red;
-        // color: purple;
         text-align: center;
     }
 }
@@ -216,21 +221,201 @@ a {
 		;
 	}
 }
+
 footer {
-    background-color: pink;
-}
-
-
-
-
-
-@media (max-width: 1026px) {
-    body {
-        background: skyblue;
+    border-top: 1px solid rgba(225, 225, 225, .25);
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+    p {
+        font-size: 11px;
+        text-align: center;
+        margin: 10px 0;
+    }
+    span {
+        font-weight: 700;
+    }
+    #copyright {
+        font-size: 16px;
+        font-weight: 400;
     }
 }
-@media (max-width: 800px) {
+
+
+@media (max-width: 1026px) and (min-width: 926px) {
+    body {
+        background: lavender;
+    }
+    #banner {
+        width: 100%;
+    }
+    footer {
+        // background-color: pink;
+    }
+}
+
+@media (max-width: 925px) and (min-width: 801px) {
+    body {
+        background-color: lightgreen;
+    }
+    #banner {
+        flex-wrap: nowrap;
+        margin: 0;
+        #selfPortrait {
+            width: 20%;
+        }
+        .right-banner {
+            width: 80%;
+            #socialLinks {
+                padding: 50px 20%;
+                img {
+                    height: 75px;
+                    max-width: 75px;
+                    &#linkedInIcon {
+                        max-width: 85px !important;
+                    }
+                    &#stackOverflowIcon {
+                        height: 85px;
+                        max-width: 85px;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 800px) and (min-width: 614px) {
+    body {
+        background: lightgoldenrodyellow;
+    }
+    #banner {
+        flex-wrap: nowrap;
+        margin: 0;
+        .speechBubbleDesktop {
+            max-width: 100% !important;
+        }
+        #selfPortrait {
+            width: 25%;
+        }
+        .right-banner {
+            width: 75%;
+            #socialLinks {
+                padding: 0 3%;
+                border: 5px solid #020f6d;
+                background-color: #cff4fd !important;
+                background-image: none;
+                img {
+                    height: 75px;
+                    max-width: 75px;
+                    &#linkedInIcon {
+                        max-width: 85px !important;
+                    }
+                    &#stackOverflowIcon {
+                        height: 85px;
+                        max-width: 85px;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 613px) {
     body {
         background: pink;
+    }
+    #banner {
+        flex-wrap: wrap;
+        width: 100vw;
+        height: 475px;
+        margin: 0;
+        justify-content: flex-start;
+        align-content: flex-start;
+        .speechBubbleMobile {
+            display: inline;
+            max-width: 90vw;
+            height: 150px;
+            margin: 10px auto 0;
+        }
+        #selfPortrait {
+            margin: 0;
+            max-height: 325px;
+        }
+        .right-banner {
+            flex-direction: row;
+            width: 60vw;
+            @media (max-width: 355px) {
+                width: 50vw;
+            }
+            .speechBubbleDesktop {
+                display: none;
+            }
+            #socialLinks {
+                border: 5px solid #020f6d;
+                background-color: #cff4fd !important;
+                background-image: none;
+                width: 100%;
+                flex-wrap: wrap;
+                align-content: center;
+                justify-content: center;
+                padding: 0;
+                img {
+                    height: 75px;
+                    max-width: 75px;
+                    &#linkedInIcon {
+                        max-width: 85px !important;
+                    }
+                    &#stackOverflowIcon {
+                        height: 85px;
+                        max-width: 85px;
+                        margin: 0;
+                    }
+                    @media (max-width: 355px) {
+                        height: 65px;
+                        max-width: 65px;
+                        &#linkedInIcon {
+                            max-width: 75px !important;
+                        }
+                        &#stackOverflowIcon {
+                            height: 75px;
+                            max-width: 75px;
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #nav_bar {
+        .nav_links {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            li {
+                margin: 0;
+                font-size: 24px;
+                a {
+                    padding: 0;
+                }
+            }
+        }
+    }
+    #technologies {
+        .techIcons {
+            padding: 0;
+        }
+    }
+    .timeline-item {
+        flex-direction: column;
+    }
+    footer {
+        // background-color: pink;
     }
 }
