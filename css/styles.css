@@ -2,7 +2,7 @@
   font-family: headerFont;
   src: url(fonts/FreePixel.ttf); }
 body {
-  background: #c5c0b7;
+  background: #7aa3c6;
   font-family: headerFont;
   color: black; }
 
@@ -15,9 +15,7 @@ h1 {
       font-size: 48px; } }
 
 a {
-  color: navy; }
-  a:hover {
-    color: blue; }
+  color: #263484; }
 
 .diagonal-bg {
   position: fixed;
@@ -90,7 +88,7 @@ a {
   height: 45px;
   transition: 1s ease-out all; }
   #nav_bar.navbar-fixed {
-    background-color: skyblue; }
+    background-color: #7aa3c6; }
   #nav_bar .nav_links {
     margin: 0;
     height: 100%;
@@ -131,7 +129,7 @@ a {
   padding: 3em 2em 2em;
   position: relative;
   color: black;
-  border-left: 2px solid rgba(0, 0, 139, 0.7);
+  border-left: 2px solid rgba(29, 81, 125, 0.7);
   display: flex; }
   .timeline-item .lifeEventIMG {
     min-width: 199px !important;
@@ -163,13 +161,13 @@ a {
     left: -7px;
     border-radius: 10px;
     content: '';
-    border: 2px solid rgba(0, 0, 139, 0.7);
-    background: darkblue; }
+    border: 2px solid rgba(29, 81, 125, 0.7);
+    background: rgba(29, 81, 125, 0.7); }
   .timeline-item:last-child {
-    border-image: linear-gradient(to bottom, rgba(0, 0, 139, 0.7) 60%, rgba(0, 0, 139, 0)) 1 100%; }
+    border-image: linear-gradient(to bottom, rgba(29, 81, 125, 0.7) 60%, rgba(29, 81, 125, 0)) 1 100%; }
 
 footer {
-  border-top: 1px solid rgba(225, 225, 225, 0.25);
+  border-top: 1px solid rgba(122, 163, 198, 0.4);
   height: 150px;
   display: flex;
   justify-content: center;
@@ -187,15 +185,9 @@ footer {
     font-weight: 400; }
 
 @media (max-width: 1026px) and (min-width: 926px) {
-  body {
-    background: lavender; }
-
   #banner {
     width: 100%; } }
 @media (max-width: 925px) and (min-width: 801px) {
-  body {
-    background-color: lightgreen; }
-
   #banner {
     flex-wrap: nowrap;
     margin: 0; }
@@ -215,9 +207,6 @@ footer {
             max-width: 85px;
             margin: 0; } }
 @media (max-width: 800px) and (min-width: 614px) {
-  body {
-    background: lightgoldenrodyellow; }
-
   #banner {
     flex-wrap: nowrap;
     margin: 0; }
@@ -229,8 +218,8 @@ footer {
       width: 75%; }
       #banner .right-banner #socialLinks {
         padding: 0 3%;
-        border: 5px solid #020f6d;
-        background-color: #cff4fd !important;
+        border: 5px solid #263484;
+        background-color: #afcbe3 !important;
         background-image: none; }
         #banner .right-banner #socialLinks img {
           height: 75px;
@@ -242,9 +231,6 @@ footer {
             max-width: 85px;
             margin: 0; } }
 @media (max-width: 613px) {
-  body {
-    background: pink; }
-
   #banner {
     flex-wrap: wrap;
     width: 100vw;
@@ -270,8 +256,8 @@ footer {
       #banner .right-banner .speechBubbleDesktop {
         display: none; }
       #banner .right-banner #socialLinks {
-        border: 5px solid #020f6d;
-        background-color: #cff4fd !important;
+        border: 5px solid #263484;
+        background-color: #afcbe3 !important;
         background-image: none;
         width: 100%;
         flex-wrap: wrap;

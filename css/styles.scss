@@ -5,12 +5,14 @@
 }
 
 // VARIABLES
-$timeline-color: rgba(darkblue, .7);
-$navbarColor: skyblue;
+// $timeline-color: #1d517d;
+$timeline-color: rgba(#1d517d, .7);
+// $navbarColor: #afcbe3;
+$navbarColor: #7aa3c6;
 
 // BASE LAYOUT
 body {
-    background: #c5c0b7;
+    background: #7aa3c6;
     font-family: headerFont;
     color: black;
 }
@@ -24,9 +26,9 @@ h1 {
     }
 }
 a {
-    color: navy;
+    color: #263484;
     &:hover {
-        color: blue;
+        // color: #198a4a;
     }
 }
 
@@ -210,7 +212,7 @@ a {
 		border-radius: 10px;
 		content: '';
 		border: 2px solid $timeline-color;
-		background: darkblue;
+		background: $timeline-color;
 	}
 
 	&:last-child {
@@ -223,7 +225,7 @@ a {
 }
 
 footer {
-    border-top: 1px solid rgba(225, 225, 225, .25);
+    border-top: 1px solid rgba(122, 163, 198, .40);
     height: 150px;
     display: flex;
     justify-content: center;
@@ -247,7 +249,7 @@ footer {
 
 @media (max-width: 1026px) and (min-width: 926px) {
     body {
-        background: lavender;
+        // background: lavender;
     }
     #banner {
         width: 100%;
@@ -259,7 +261,7 @@ footer {
 
 @media (max-width: 925px) and (min-width: 801px) {
     body {
-        background-color: lightgreen;
+        // background-color: lightgreen;
     }
     #banner {
         flex-wrap: nowrap;
@@ -290,7 +292,7 @@ footer {
 
 @media (max-width: 800px) and (min-width: 614px) {
     body {
-        background: lightgoldenrodyellow;
+        // background: lightgoldenrodyellow;
     }
     #banner {
         flex-wrap: nowrap;
@@ -305,8 +307,8 @@ footer {
             width: 75%;
             #socialLinks {
                 padding: 0 3%;
-                border: 5px solid #020f6d;
-                background-color: #cff4fd !important;
+                border: 5px solid #263484;
+                background-color: #afcbe3 !important;
                 background-image: none;
                 img {
                     height: 75px;
@@ -327,7 +329,7 @@ footer {
 
 @media (max-width: 613px) {
     body {
-        background: pink;
+        // background: pink;
     }
     #banner {
         flex-wrap: wrap;
@@ -356,8 +358,8 @@ footer {
                 display: none;
             }
             #socialLinks {
-                border: 5px solid #020f6d;
-                background-color: #cff4fd !important;
+                border: 5px solid #263484;
+                background-color: #afcbe3 !important;
                 background-image: none;
                 width: 100%;
                 flex-wrap: wrap;
