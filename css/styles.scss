@@ -1,0 +1,423 @@
+// FONTS
+@font-face {
+    font-family: headerFont;
+    src: url(fonts/FreePixel.ttf);
+}
+
+// VARIABLES
+// $timeline-color: #1d517d;
+$timeline-color: rgba(#1d517d, .7);
+// $navbarColor: #afcbe3;
+$navbarColor: #7aa3c6;
+
+// BASE LAYOUT
+body {
+    background: #7aa3c6;
+    font-family: headerFont;
+    color: black;
+}
+
+h1 {
+    font-size: 72px;
+    margin-left: 7%;
+    font-weight: 700;
+    @media (max-width: 475px) {
+        font-size: 48px;
+    }
+}
+a {
+    color: #263484;
+    &:hover {
+        // color: #198a4a;
+    }
+}
+
+.diagonal-bg {
+  position: fixed;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+
+#body_div {
+    top: 0;
+    position: relative;
+    height: 100%;
+}
+
+.navbar-fixed {
+    top: 0;
+    z-index: 100;
+    position: fixed;
+    width: 100%;
+}
+
+.timeline-container {
+	max-width: 1024px;
+	width: 90%;
+	margin: 0 auto;
+}
+
+// SECTION STYLES
+#banner {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    height: 475px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    .speechBubbleMobile {
+        display: none;
+    }
+    #selfPortrait {
+        margin-top: 100px;
+    }
+    .right-banner {
+        padding-top: 15px;
+        flex-direction: column;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        .speechBubbleDesktop {
+            max-width: 80%;
+            height: 200px;
+        }
+        #socialLinks {
+            margin: auto 0;
+            background-image: url(../images/contact-box4.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            display: flex;
+            padding: 50px 100px;
+            img {
+                margin: 5px;
+                flex: 1;
+                height: 100px;
+                max-width: 100px;
+                &#linkedInIcon {
+                    max-width: 110px !important;
+                }
+                &#stackOverflowIcon {
+                    height: 110px;
+                    max-width: 110px;
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+
+#nav_bar {
+    border: 0;
+    border-radius: 0px;
+    margin-bottom: 0;
+    height: 45px;
+    transition: 1s ease-out all;
+    &.navbar-fixed {
+        background-color: $navbarColor;
+    }
+    .nav_links {
+        margin: 0;
+        height: 100%;
+        height: 45px;
+        li {
+            display: inline-block;
+            margin: 5px 10px;
+            font-size: 24px;
+            a {
+                padding: 0 15px;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+#technologies {
+    padding-top: 100px;
+    .techIcons {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 0px 100px;
+    }
+    span {
+        margin: 40px 10px 0px 10px;
+    }
+    .languageIcon {
+        width: 75px;
+        height: 75px;
+        &#gulp {
+            width: 40px;
+        }
+        &#php {
+            margin: 15px 0px;
+            height: 45px;
+        }
+    }
+    h2 {
+        text-align: center;
+    }
+}
+
+#history {
+    padding-top: 100px;
+}
+
+.timeline-item {
+	padding: 3em 2em 2em;
+	position: relative;
+    color: black;
+	border-left: 2px solid $timeline-color;
+    display: flex;
+    .lifeEventIMG {
+        min-width: 199px !important;
+        max-width: 200px;
+        &.sindeo {
+            max-height: 110px !important;
+        }
+        &.theater {
+            max-height: 200px;
+        }
+    }
+    .liveEventText {
+        margin-left: 20px;
+        h4 {
+            font-size: 28px;
+        }
+        p {
+            font-size: 16px;
+        }
+    }
+	&::before {
+		content: attr(date-is);
+		position: absolute;
+        left: 1em;
+		top: 1em;
+		display: block;
+        font-weight: 700;
+		font-size: 12px;
+	}
+
+	&::after {
+		width: 10px;
+		height: 10px;
+		display: block;
+		top: 1em;
+		position: absolute;
+		left: -7px;
+		border-radius: 10px;
+		content: '';
+		border: 2px solid $timeline-color;
+		background: $timeline-color;
+	}
+
+	&:last-child {
+		border-image: linear-gradient(
+			to bottom,
+			$timeline-color 60%,
+			rgba($timeline-color, 0)) 1 100%
+		;
+	}
+}
+
+footer {
+    border-top: 1px solid rgba(122, 163, 198, .40);
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+    p {
+        font-size: 11px;
+        text-align: center;
+        margin: 10px 0;
+    }
+    span {
+        font-weight: 700;
+    }
+    #copyright {
+        font-size: 16px;
+        font-weight: 400;
+    }
+}
+
+
+@media (max-width: 1026px) and (min-width: 926px) {
+    body {
+        // background: lavender;
+    }
+    #banner {
+        width: 100%;
+    }
+    footer {
+        // background-color: pink;
+    }
+}
+
+@media (max-width: 925px) and (min-width: 801px) {
+    body {
+        // background-color: lightgreen;
+    }
+    #banner {
+        flex-wrap: nowrap;
+        margin: 0;
+        #selfPortrait {
+            width: 20%;
+        }
+        .right-banner {
+            width: 80%;
+            #socialLinks {
+                padding: 50px 20%;
+                img {
+                    height: 75px;
+                    max-width: 75px;
+                    &#linkedInIcon {
+                        max-width: 85px !important;
+                    }
+                    &#stackOverflowIcon {
+                        height: 85px;
+                        max-width: 85px;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 800px) and (min-width: 614px) {
+    body {
+        // background: lightgoldenrodyellow;
+    }
+    #banner {
+        flex-wrap: nowrap;
+        margin: 0;
+        .speechBubbleDesktop {
+            max-width: 100% !important;
+        }
+        #selfPortrait {
+            width: 25%;
+        }
+        .right-banner {
+            width: 75%;
+            #socialLinks {
+                padding: 0 3%;
+                border: 5px solid #263484;
+                background-color: #afcbe3 !important;
+                background-image: none;
+                img {
+                    height: 75px;
+                    max-width: 75px;
+                    &#linkedInIcon {
+                        max-width: 85px !important;
+                    }
+                    &#stackOverflowIcon {
+                        height: 85px;
+                        max-width: 85px;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 613px) {
+    body {
+        // background: pink;
+    }
+    #banner {
+        flex-wrap: wrap;
+        width: 100vw;
+        height: 475px;
+        margin: 0;
+        justify-content: flex-start;
+        align-content: flex-start;
+        .speechBubbleMobile {
+            display: inline;
+            max-width: 90vw;
+            height: 150px;
+            margin: 10px auto 0;
+        }
+        #selfPortrait {
+            margin: 0;
+            max-height: 325px;
+        }
+        .right-banner {
+            flex-direction: row;
+            width: 60vw;
+            @media (max-width: 355px) {
+                width: 50vw;
+            }
+            .speechBubbleDesktop {
+                display: none;
+            }
+            #socialLinks {
+                border: 5px solid #263484;
+                background-color: #afcbe3 !important;
+                background-image: none;
+                width: 100%;
+                flex-wrap: wrap;
+                align-content: center;
+                justify-content: center;
+                padding: 0;
+                img {
+                    height: 75px;
+                    max-width: 75px;
+                    &#linkedInIcon {
+                        max-width: 85px !important;
+                    }
+                    &#stackOverflowIcon {
+                        height: 85px;
+                        max-width: 85px;
+                        margin: 0;
+                    }
+                    @media (max-width: 355px) {
+                        height: 65px;
+                        max-width: 65px;
+                        &#linkedInIcon {
+                            max-width: 75px !important;
+                        }
+                        &#stackOverflowIcon {
+                            height: 75px;
+                            max-width: 75px;
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #nav_bar {
+        .nav_links {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            li {
+                margin: 0;
+                font-size: 24px;
+                a {
+                    padding: 0;
+                }
+            }
+        }
+    }
+    #technologies {
+        .techIcons {
+            padding: 0;
+        }
+    }
+    .timeline-item {
+        flex-direction: column;
+    }
+    footer {
+        // background-color: pink;
+    }
+}
