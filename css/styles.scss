@@ -1,13 +1,11 @@
 // FONTS
 @font-face {
     font-family: headerFont;
-    src: url(fonts/FreePixel.ttf);
+    src: url(./css/fonts/FreePixel.ttf);
 }
 
 // VARIABLES
-// $timeline-color: #1d517d;
 $timeline-color: rgba(#1d517d, .7);
-// $navbarColor: #afcbe3;
 $navbarColor: #7aa3c6;
 
 // BASE LAYOUT
@@ -27,9 +25,6 @@ h1 {
 }
 a {
     color: #263484;
-    &:hover {
-        // color: #198a4a;
-    }
 }
 
 .diagonal-bg {
@@ -254,9 +249,6 @@ footer {
     #banner {
         width: 100%;
     }
-    footer {
-        // background-color: pink;
-    }
 }
 
 @media (max-width: 925px) and (min-width: 801px) {
@@ -416,8 +408,5 @@ footer {
     }
     .timeline-item {
         flex-direction: column;
-    }
-    footer {
-        // background-color: pink;
     }
 }
