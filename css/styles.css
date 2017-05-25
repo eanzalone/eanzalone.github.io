@@ -1,6 +1,7 @@
 @font-face {
   font-family: headerFont;
-  src: url(../fonts/FreePixel.ttf); }
+  src: url(../css/fonts/FreePixel.ttf);
+}
 body {
   background: #7aa3c6;
   font-family: headerFont;
